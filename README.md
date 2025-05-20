@@ -312,9 +312,11 @@ For online Clue:
 
 ## Variant: Ultimate Detective
 
-The "Ultimate Detective" variant adds a unique twist: players reveal that they have a card from a suggestion without specifying which card. This creates special opportunities for deduction.
+The "Ultimate Detective" variant adds unique twists to the standard game, creating special opportunities for deduction.
 
-### Ultimate Detective Algorithm
+### Anonymous Card Revelation
+
+In this aspect of Ultimate Detective mode, players reveal that they have a card from a suggestion without specifying which card.
 
 ```
 When making a suggestion in Ultimate Detective mode:
@@ -333,24 +335,66 @@ When making a suggestion in Ultimate Detective mode:
         Still mark them with ?Red for the players who might have them
 ```
 
+### Key Questions Mechanism
+
+In Ultimate Detective mode, users are given keys (one per player at the beginning of the game) which they can use after they make a suggestion to eliminate a single possibility by asking a player a "key question".
+
+```
+Key Question Algorithm:
+    
+    When a player uses their key to ask another player about a specific card:
+        If Player A (Mrs. White) asks Player B (Mr. Green) whether he has the Ballroom:
+            Mark ✗ for Player A (Mrs. White) for the Ballroom
+            (Mrs. White wouldn't ask about a card she already has)
+            
+    Note: Only the player who asked the key question learns the answer.
+    Other players only observe which question was asked, not the response.
+    
+    Strategic Conservation:
+        Using a key reveals information to other players (that you don't have that card)
+        Reserve your key for critical moments, ideally when you're ready to solve
+        Avoid giving free information to opponents unless necessary
+```
+
+### Clue Cards Variant
+
+"Clue Cards" is a variant where a player rolls a 1, random events are introduced that force information sharing.
+
+Clue Card Effects Examples:
+    - "Show a card to your neighbor"
+    - "Everybody reveal a card"
+    - "Pick a suspect to be revealed"
+    - "Whoever has Mr. Green must reveal it"
+    
+Clue Card Strategy:
+    - When forced to show a card, prioritize cards already seen by others
+    - Avoid revealing room cards when possible (hardest to eliminate)
+    - Track which cards are revealed through Clue Card events
+    - When other players must reveal cards, update your grid immediately
+
 ### Ultimate Detective Optimization
 
 ```
 Strategic suggestions in Ultimate Detective mode:
     
-    1. If you've already identified one solution card (e.g., circled the suspect):
-        Include that known card in your suggestion
-        If the total hands raised equals 3, you know the other two cards aren't in the solution
-        If the total hands raised equals 2, one of the remaining cards must be in the solution
-        
-    2. When you're down to just a few possibilities:
-        Make a suggestion with cards you suspect are in the solution
-        If few or no players have these cards, your suspicion is confirmed
-        
-    3. Early game efficiency:
-        Make suggestions where you hold one of the cards
-        This guarantees at least one response and maximizes information gained per turn
-```# Clue Detective: Advanced Strategies & Algorithms
+    1. Maximize independent information sets:
+       Avoid including cards you already know in suggestions
+       Each suggestion should create a new independent set of possibilities
+       
+    2. Special case - known solution card:
+       If you've identified a solution card (e.g., circled the suspect):
+       Only include a known card if it doesn't give away the solution to other players
+       Choose cards that still add new information to your tracking grid
+       
+    3. Information density optimization:
+       Make suggestions that will create the maximum number of new possibility groups
+       Target cards with high uncertainty across multiple players
+       
+    4. Key Question strategy:
+       Reserve your key for critical moments, ideally when you're ready to solve
+       Avoid giving free information to opponents by using keys too early
+       When observing others use keys, note which cards they're asking about (reveals cards they don't have)
+```
 
 ---
 
