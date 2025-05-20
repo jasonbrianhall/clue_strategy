@@ -310,6 +310,48 @@ For online Clue:
    - Create a simple program to help track and analyze the game state
    - Consider tracking probabilities for uncertain cards
 
+## Variant: Ultimate Detective
+
+The "Ultimate Detective" variant adds a unique twist: players reveal that they have a card from a suggestion without specifying which card. This creates special opportunities for deduction.
+
+### Ultimate Detective Algorithm
+
+```
+When making a suggestion in Ultimate Detective mode:
+    Count how many players (including yourself) indicate they have a card from your suggestion
+    
+    If the total equals the number of cards in the suggestion (typically 3):
+        Cross off (—) all cards in that suggestion from being in the solution
+        Still mark each card with a colored question mark (e.g., ?Red)
+        This preserves the information for normal deduction purposes
+        
+    For example:
+        You suggest: Miss Scarlet, Rope, Conservatory
+        You have the Rope
+        Two other players indicate they have one of these cards
+        All 3 cards are accounted for, so cross off all 3 from the solution
+        Still mark them with ?Red for the players who might have them
+```
+
+### Ultimate Detective Optimization
+
+```
+Strategic suggestions in Ultimate Detective mode:
+    
+    1. If you've already identified one solution card (e.g., circled the suspect):
+        Include that known card in your suggestion
+        If the total hands raised equals 3, you know the other two cards aren't in the solution
+        If the total hands raised equals 2, one of the remaining cards must be in the solution
+        
+    2. When you're down to just a few possibilities:
+        Make a suggestion with cards you suspect are in the solution
+        If few or no players have these cards, your suspicion is confirmed
+        
+    3. Early game efficiency:
+        Make suggestions where you hold one of the cards
+        This guarantees at least one response and maximizes information gained per turn
+```# Clue Detective: Advanced Strategies & Algorithms
+
 ---
 
 "Elementary, my dear Watson. The game is most certainly afoot!"
