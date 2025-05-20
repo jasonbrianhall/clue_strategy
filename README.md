@@ -10,6 +10,7 @@ This guide presents systematic approaches to consistently solve Clue puzzles wit
 - [Advanced Techniques](#advanced-techniques)
 - [Optimization Strategies](#optimization-strategies)
 - [Variant: Ultimate Detective](#variant-ultimate-detective)
+- [Variant: Clue Cards (#clue-cards-variant)
 - [Example Cases](#example-cases)
 - [Digital Implementation Tips](#digital-implementation-tips)
 
