@@ -366,16 +366,16 @@ Key Question Algorithm:
 "Clue Cards" is a variant where a player rolls a 1, random events are introduced that force information sharing.
 
 Clue Card Effects Examples:
-    - "Show a card to your neighbor"
-    - "Everybody reveal a card"
-    - "Pick a suspect to be revealed"
-    - "Whoever has Mr. Green must reveal it"
+- "Show a card to your neighbor"
+- "Everybody reveal a card"
+- "Pick a suspect to be revealed"
+- "Whoever has Mr. Green must reveal it"
     
 Clue Card Strategy:
-    - When forced to show a card, prioritize cards already seen by others
-    - Avoid revealing room cards when possible (hardest to eliminate)
-    - Track which cards are revealed through Clue Card events
-    - When other players must reveal cards, update your grid immediately
+- When forced to show a card, prioritize cards already seen by others
+- Avoid revealing room cards when possible (hardest to eliminate)
+- Track which cards are revealed through Clue Card events
+- When other players must reveal cards, update your grid immediately
 
 ### Ultimate Detective Optimization
 
