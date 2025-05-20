@@ -361,22 +361,6 @@ Key Question Algorithm:
         Avoid giving free information to opponents unless necessary
 ```
 
-### Clue Cards Variant
-
-"Clue Cards" is a variant where a player rolls a 1, random events are introduced that force information sharing.
-
-Clue Card Effects Examples:
-- "Show a card to your neighbor"
-- "Everybody reveal a card"
-- "Pick a suspect to be revealed"
-- "Whoever has Mr. Green must reveal it"
-    
-Clue Card Strategy:
-- When forced to show a card, prioritize cards already seen by others
-- Avoid revealing room cards when possible (hardest to eliminate)
-- Track which cards are revealed through Clue Card events
-- When other players must reveal cards, update your grid immediately
-
 ### Ultimate Detective Optimization
 
 ```
@@ -400,6 +384,22 @@ Strategic suggestions in Ultimate Detective mode:
        Avoid giving free information to opponents by using keys too early
        When observing others use keys, note which cards they're asking about (reveals cards they don't have)
 ```
+
+## Clue Cards Variant
+
+"Clue Cards" is a variant where a player rolls a 1, random events are introduced that force information sharing.
+
+Clue Card Effects Examples:
+- "Show a card to your neighbor"
+- "Everybody reveal a card"
+- "Pick a suspect to be revealed"
+- "Whoever has Mr. Green must reveal it"
+    
+Clue Card Strategy:
+- When forced to show a card, prioritize cards already seen by others
+- Avoid revealing room cards when possible (hardest to eliminate)
+- Track which cards are revealed through Clue Card events
+- When other players must reveal cards, update your grid immediately
 
 ---
 
