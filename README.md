@@ -53,7 +53,11 @@ Critical deduction rules:
 5. If you cross off 5/6 suspects, 5/6 weapons, or 8/9 rooms from the solution, circle the remaining card as it must be in the solution
 6. If a player has a hand size of N (typically 3-4 cards):
    - Once you've confirmed N cards for them (N checkmarks), mark ✗ for all other cards in their column
-   - If they have (N-1+) confirmed cards and one independent color group, mark ✗ for all other cards in their column
+   - If they have (N-1+) confirmed cards and one plus independent color group, mark ✗ for all other cards in their column
+
+  For example, if player 3 has three cards, two known checkmarks, and one color group, mark off everything else not checkmarked or in the color group.
+  
+  - Additionally, if the player has three cards, two check marks, a color group and an overlapping number group, only the overlaps can be possibilities and thus anything that's not overlapped, can be marked with an ✗.  If this leaves only one possibility, mark it with a checkmark (✓).
 
 ## Core Algorithms
 
@@ -69,7 +73,7 @@ When a player shows a card in response to a suggestion:
         Mark these new cards with ?Green (or next color in your system)
     
     If these cards overlap with previously shown suggestions:
-        Mark them with numbers (1, 2, 3...) to track correlation
+        Mark them with numbers (1, 2, 3...) to track correlation (marking each one with the exact same number)
         
 When you confirm a player has a specific card:
     Mark that card with ✓
